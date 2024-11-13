@@ -1,0 +1,6 @@
+/.vscode
+/jest.config.js
+/node_modules
+/package-lock.json
+/sqlite3
+/tests
