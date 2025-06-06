@@ -2,6 +2,8 @@
 
 Este repositório contém o backend de um sistema de marketplace de marketing digital inspirado no modelo do iFood. O sistema oferece funcionalidades como cadastro e autenticação de usuários, cadastro de vendedores, criação e remoção de produtos para venda, além de um sistema de carrinho de compras para adição e remoção de itens.
 
+> **Frontend disponível em:** [https://github.com/Caio-Sc/Projeto-market-digital-Frontend](https://github.com/Caio-Sc/Projeto-market-digital-Frontend)
+
 ## Funcionalidades
 
 - Cadastro de Usuário: Permite que novos usuários se cadastrem na plataforma.
