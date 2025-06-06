@@ -82,9 +82,10 @@ exports.compraCarrinho = (req, res) => {
     const produtos = req.body.produtos; 
     const loja = req.body.loja; 
     const token = req.headers['authorization']; 
-    console.log(loja)
-    console.log(produtos)
-    // Validação básica
+    if (!token) {
+        return res.status(401).json({ "erro": "Token não fornecido" });
+    }
+
     if (!Array.isArray(produtos)) {
         return res.status(400).json({ "erro": "A lista de produtos deve ser um array." });
     }
@@ -95,8 +96,7 @@ exports.compraCarrinho = (req, res) => {
     userid = auth.getUserId(token);
     //Calcula preço total da compra
     const precoTotal = servicoNegocio.calcularPreco(produtos);
-    console.log(precoTotal)
-
+    console.log("id loja " + loja.id);
     this.pegarVendedor(loja.id, (err, vendedor) => {
         if (err) {
             console.log(err)
@@ -165,6 +165,10 @@ exports.pegarLoja = (vendedorID, callback) => {
 exports.registrarProduto = (req, res) => {
     const token = req.headers['authorization']; 
 
+    if (!token) {
+        return res.status(401).json({ "erro": "Token não fornecido" });
+    }
+
     if (!auth.autenticarJWT(token)) {
         return res.status(401).json({ "erro": "Token inválido" });
     }
@@ -192,6 +196,14 @@ exports.registrarLoja = (req, res) => {
     const token = req.headers['authorization'];
     const { endereco, nome, info } = req.body;
     let vendedorID
+
+    if (!token) {
+        return res.status(401).json({ "erro": "Token não fornecido" });
+    }
+
+    if (nome == undefined || endereco == undefined || info == undefined) {
+        return res.status(400).json({ "erro": "Todos os campos são obrigatórios" });
+    }
 
     try {
         auth.autenticarJWT(token);

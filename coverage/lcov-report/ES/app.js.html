@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">92.3% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/13</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">92.3% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/13</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -106,100 +106,100 @@
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const express = require('express');
-const app = express();
-const cors = require('cors');
-const usuariosRoutes = require('./routes/usuarios');
-const negocioRoutes = require('./routes/negocio')
-// Middleware para processar JSON
-app.use(express.json());
-app.use(cors());
-app.use(express.urlencoded({ extended: true }));
-&nbsp;
-// Configuração de rotas
-app.use('/usuarios', usuariosRoutes);
-app.use('/negocio', negocioRoutes);
-&nbsp;
-// Rodando o servidor
-const PORT = 3000;
-app.listen(PORT, <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >    console.log(`Servidor rodando na porta ${PORT}`);</span>
-});
-&nbsp;
-&nbsp;
-// Testes
-// const express = require('express');
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">// const express = require('express');
+// const app = express();
 // const cors = require('cors');
 // const usuariosRoutes = require('./routes/usuarios');
-// const negocioRoutes = require('./routes/negocio');
-&nbsp;
-// const app = express();
-&nbsp;
-// // Middleware
+// const negocioRoutes = require('./routes/negocio')
+// // Middleware para processar JSON
 // app.use(express.json());
 // app.use(cors());
 // app.use(express.urlencoded({ extended: true }));
 &nbsp;
-// // Rotas
+// // Configuração de rotas
 // app.use('/usuarios', usuariosRoutes);
 // app.use('/negocio', negocioRoutes);
 &nbsp;
-// // Função para criar servidor
-// function createServer() {
-//     return app.listen(0);
-// }
+// // Rodando o servidor
+// const PORT = 3000;
+// app.listen(PORT, () =&gt; {
+//     console.log(`Servidor rodando na porta ${PORT}`);
+// });
 &nbsp;
-// module.exports = { app, createServer };</pre></td></tr></table></pre>
+&nbsp;
+// Testes
+const express = require('express');
+const cors = require('cors');
+const usuariosRoutes = require('./routes/usuarios');
+const negocioRoutes = require('./routes/negocio');
+&nbsp;
+const app = express();
+&nbsp;
+// Middleware
+app.use(express.json());
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+&nbsp;
+// Rotas
+app.use('/usuarios', usuariosRoutes);
+app.use('/negocio', negocioRoutes);
+&nbsp;
+// Função para criar servidor
+function createServer() {
+    return app.listen(0);
+}
+&nbsp;
+module.exports = { app, createServer };</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-11-13T00:28:46.899Z
+                at 2024-11-13T02:37:41.698Z
             </div>
         <script src="../prettify.js"></script>
         <script>
